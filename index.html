@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[기안서] 리니지클래식 아스테어 서버 대형 혈맹 거래 활성화 프로모션</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <style>
+    :root {
+      --primary: #0F172A;
+      --secondary: #334155;
+      --accent: #1E3A8A;
+      --border-color: #CBD5E1;
+      --border-light: #E2E8F0;
+      --bg-light: #F8FAFC;
+      --bg-alt: #F1F5F9;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+      background-color: #F8FAFC;
+      color: var(--text-main);
+      line-height: 1.65;
+      letter-spacing: -0.015em;
+      padding: 40px 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .report-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      padding: 56px 64px;
+    }
+
+    /* 상단 결재란 & 메타 헤더 */
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .doc-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      text-transform: uppercase;
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      padding: 2px 8px;
+      width: fit-content;
+      margin-bottom: 4px;
+    }
+
+    .doc-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    /* 결재선 테이블 */
+    .approval-table {
+      border-collapse: collapse;
+      font-size: 11px;
+      text-align: center;
+      width: 220px;
+      margin-left: 20px;
+    }
+
+    .approval-table th, 
+    .approval-table td {
+      border: 1px solid var(--border-color);
+      padding: 4px;
+    }
+
+    .approval-table th {
+      background-color: var(--bg-alt);
+      font-weight: 600;
+      color: var(--secondary);
+      height: 24px;
+    }
+
+    .approval-sign {
+      height: 48px;
+      vertical-align: middle;
+      color: #94A3B8;
+    }
+
+    /* 본문 구조 */
+    .section-block {
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      background-color: var(--bg-light);
+      border-left: 3px solid var(--primary);
+      padding: 7px 12px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .content-box {
+      padding: 2px 6px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bullet-list li {
+      font-size: 13.5px;
+      color: var(--secondary);
+      display: flex;
+      align-items: baseline;
+      line-height: 1.6;
+    }
+
+    .bullet-list li::before {
+      content: "-";
+      margin-right: 8px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    /* 서브 리스트 형태 (내용 항목용) */
+    .sub-section-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sub-item-header {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .nested-bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 14px;
+    }
+
+    .nested-bullet-list li {
+      font-size: 13.5px;
+      color: var(--secondary);
+      display: flex;
+      align-items: baseline;
+      line-height: 1.6;
+    }
+
+    .nested-bullet-list li::before {
+      content: "-";
+      margin-right: 8px;
+      color: var(--secondary);
+    }
+
+    /* 비용 강조 박스 */
+    .cost-block {
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+      padding: 14px 18px;
+      border-radius: 2px;
+    }
+
+    .cost-main {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .cost-sub {
+      font-size: 13px;
+      color: var(--secondary);
+      padding-left: 10px;
+    }
+
+    /* 인쇄 최적화 */
+    @media print {
+      body {
+        background-color: #FFFFFF;
+        padding: 0;
+      }
+      .report-wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 20px 24px;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .section-block {
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        background-color: #F1F5F9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    /* 상단 툴바 */
+    .toolbar {
+      max-width: 860px;
+      margin: 0 auto 12px auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .print-btn {
+      background-color: var(--primary);
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 2px;
+      font-family: inherit;
+    }
+
+    .print-btn:hover {
+      background-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="report-wrapper">
+    
+    <!-- 결재선 및 타이틀 -->
+    <header class="header-section">
+      <div class="doc-meta">
+        <h1 class="doc-title">[기안서] 리니지클래식 아스테어 서버 대형 혈맹 거래 활성화 프로모션</h1>
+      </div>
+    </header>
+
+    <!-- 1. 목적 -->
+    <section class="section-block">
+      <h2 class="section-title">1. 목적</h2>
+      <div class="content-box">
+        <ul class="bullet-list">
+          <li>서버이전 및 혈맹 간 전쟁에 따른 아데나 거래 수요의 자사 유입 확대</li>
+          <li>전쟁 기간 아데나 거래량 변화 및 대형 혈맹의 구매력 검증</li>
+          <li>경쟁 플랫폼 이용자의 자사 전환 유도 및 지속적인 거래 기반 확보</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. 내용 -->
+    <section class="section-block">
+      <h2 class="section-title">2. 내용</h2>
+      <div class="content-box">
+        <ul class="sub-section-list">
+          <li>
+            <div class="sub-item-header">1) 지급 대상 : 리니지클래식 아스테어 서버 '단결' 혈맹원 중 자사 혈맹시스템 등록자</div>
+          </li>
+          <li>
+            <div class="sub-item-header">2) 지급 혜택 : 1인당 20,000원 상당 혜택 지급</div>
+          </li>
+          <li>
+            <div class="sub-item-header">3) 참여 조건</div>
+            <ul class="nested-bullet-list">
+              <li>지급 혜택의 2배 이상인 1인당 최소 40,000원 이상 자사 거래 이용</li>
+              <li>혈맹마크 및 캐릭터 호칭에 아이템매니아 로고·문구 적용</li>
+              <li>아이템매니아 지속 이용 및 혈맹 내 거래 활성화 협력</li>
+              <li>게임 내 브랜드 노출 및 대형길드의 자사 홍보 이슈, 인게임 바이럴</li>
+            </ul>
+          </li>
+          <li>
+            <div class="sub-item-header">4) 지급 및 운영 방식</div>
+            <ul class="nested-bullet-list">
+              <li>외부 상품권 충전 후 아데나 구매에 활용 예정</li>
+              <li>지급 조건 이행 여부 및 거래 실적 확인</li>
+              <li>지급·충전 절차의 운영정책 적합성 사전 확인</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. 기대효과 -->
+    <section class="section-block">
+      <h2 class="section-title">3. 기대효과</h2>
+      <div class="content-box">
+        <ul class="bullet-list">
+          <li>거래 활성화 : 전체 지급 대상자의 조건 충족 시 최소 1,600만원의 자사 거래금액 확보</li>
+          <li>구매력 검증 : 전쟁 기간 대형 혈맹의 아데나 구매 규모 및 거래 패턴 분석</li>
+          <li>고객 확보 : 경쟁 플랫폼 이용자의 자사 전환 유도 및 지속 거래 기반 마련</li>
+          <li>브랜드 확산 : 혈맹마크·호칭을 통한 인게임 브랜드 노출 및 바이럴 효과 기대</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. 비용 -->
+    <section class="section-block">
+      <h2 class="section-title">4. 비용 : 8,000,000원</h2>
+      <div class="content-box cost-block">
+        <div class="cost-sub">- 지급 방식: 외부 상품권 충전 방식(운영정책 및 정산 절차 확인 후 확정)</div>
+      </div>
+    </section>
+
+    <!-- 5. 담당자 의견 -->
+    <section class="section-block">
+      <h2 class="section-title">5. 담당자 의견</h2>
+      <div class="content-box">
+        <ul class="bullet-list">
+          <li>서버이전 및 전쟁 기간 아데나 거래 수요를 활용하여 대형 혈맹의 자사 거래 유입 및 활성화 도모</li>
+          <li>대형 혈맹의 구매력과 거래 기여도를 검증하고, 경쟁 플랫폼 이용자의 자사 전환 및 지속 이용 유도</li>
+          <li>혈맹마크·호칭 적용 및 대형 혈맹의 자발적 홍보를 통한 게임 내 브랜드 노출과 바이럴 효과 기대</li>
+          <li>프로모션 전후 경쟁사 대비 아스테어 서버 거래 점유율 변화 분석을 통한 실질적인 성과 검증 필요</li>
+          <li>프로모션 성과를 기반으로 향후 타 서버 및 대형 혈맹 대상 마케팅 확대 가능성 검토</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
