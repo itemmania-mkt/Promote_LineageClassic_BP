@@ -43,13 +43,10 @@
       padding: 56px 64px;
     }
 
-    /* 상단 결재란 & 메타 헤더 */
+    /* 상단 메타 헤더 */
     .header-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 24px;
-      padding-bottom: 24px;
+      margin-bottom: 28px;
+      padding-bottom: 12px;
       border-bottom: 2px solid var(--primary);
     }
 
@@ -79,34 +76,16 @@
       color: var(--primary);
       line-height: 1.35;
       letter-spacing: -0.02em;
+      margin-bottom: 12px;
     }
 
-    /* 결재선 테이블 */
-    .approval-table {
-      border-collapse: collapse;
-      font-size: 11px;
-      text-align: center;
-      width: 220px;
-      margin-left: 20px;
-    }
-
-    .approval-table th, 
-    .approval-table td {
-      border: 1px solid var(--border-color);
-      padding: 4px;
-    }
-
-    .approval-table th {
-      background-color: var(--bg-alt);
-      font-weight: 600;
-      color: var(--secondary);
-      height: 24px;
-    }
-
-    .approval-sign {
-      height: 48px;
-      vertical-align: middle;
-      color: #94A3B8;
+    /* 기안자 정보: 우측 정렬 */
+    .author-info {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-sub);
+      text-align: right;
+      padding-top: 4px;
     }
 
     /* 본문 구조 */
@@ -196,13 +175,6 @@
       border-radius: 2px;
     }
 
-    .cost-main {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
     .cost-sub {
       font-size: 13px;
       color: var(--secondary);
@@ -262,13 +234,14 @@
 </head>
 <body>
 
-
   <div class="report-wrapper">
     
-    <!-- 결재선 및 타이틀 -->
+    <!-- 타이틀 및 우측 정렬된 작성자 정보 -->
     <header class="header-section">
       <div class="doc-meta">
+        <span class="doc-badge">마케팅기획실</span>
         <h1 class="doc-title">[기안서] 리니지클래식 아스테어 서버 대형 혈맹 거래 활성화 프로모션</h1>
+        <div class="author-info">기안자 : 마케팅팀 위아름</div>
       </div>
     </header>
 
